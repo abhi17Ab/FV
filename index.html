@@ -237,7 +237,7 @@
             tone-mapping="neutral"
             shadow-intensity="1.19" 
             autoplay 
-            environment-image="music_hall_01_1k.hdr"
+            environment-image="./music_hall_01_1k.hdr"
             exposure="0.72" 
             shadow-softness="1" 
             camera-orbit="0deg 75deg 3m" 
@@ -255,11 +255,18 @@
           
           <div class="model-badge">3D VIEW</div>
           
-          <img src="ang1.png" alt="Sofa 1">
-          <img src="generated-image.png" alt="Sofa 2">
+          <div class="viewer-controls">
+            <button id="orbit-control" title="Orbit Mode">⟳</button>
+            <button id="first-person" title="First Person View">👤</button>
+            <button id="reset-view" title="Reset View">⌂</button>
+          </div>
+        </div>
+        
+        <!-- Gallery Images -->
+        <img src="./ang1.png" alt="Sofa 1">
+        <img src="./generated-image.png" alt="Sofa 2">
 
-      </div>    
-  
+      </div>
       
       <div class="elphaba-section">
         <div style="text-align:center;margin-bottom:4px;">
