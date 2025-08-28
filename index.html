@@ -1,27 +1,475 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>&lt;model-viewer&gt; template</title>
-    <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer src="Camera.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="music_hall_01_1k.hdr">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
+<head>
+  <meta charset="UTF-8">
+  <title>Elphaba Fabric 3 Seater Power Recliner Sofa | Furniture Village</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #fff; color: #232323;}
+    a { color: #3676b8; text-decoration: none;}
+    .red-bar { background: #911a28; color: #fff; text-align: center; padding: 8px 0; font-size: 18px; font-weight: bold; letter-spacing: 2px;}
+    .timer { font-weight: bold; background: #232323; border-radius: 5px; padding: 4px 10px; margin-left: 8px;}
+    .header-main { display: flex; align-items: center; justify-content: space-between; padding: 17px 2.5vw 18px 2.5vw; background: #f9f9f9;}
+    .logo-section { display: flex; align-items: center; }
+    .logo-img { background: #2196f3; padding: 9px 18px 10px 18px; border-radius: 3px;}
+    .logo-img span {color: #fff;font-size: 28px;font-family: 'Trebuchet MS', cursive;}
+    .support-bar { color: #232323; font-size: 16px; margin-left: 22px;}
+    .support-bar a { color: #2d649c; font-weight: bold;}
+    .top-icons { display: flex; align-items: center; gap: 22px; font-size: 16px;}
+    .search-row { margin: 0; background:#f9f9f9; border-bottom: 1px solid #e6e6e6; padding: 16px 2.5vw 12px 2.5vw; }
+    .search-bar-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center;}
+    .searchbar { flex: 1; padding: 10px 16px; font-size: 18px; border-radius: 4px; border: 1.5px solid #cfcfcf;}
+    .nav-row { background: #ededed; color: #232323; font-size: 17px; padding: 0 2.5vw;display: flex;gap:20px;flex-wrap: wrap;}
+    .nav-row a { color: #232323; font-weight: 500;padding:14px 12px;display:inline-block;}
+    .main { display: flex; gap: 36px; padding: 32px 2vw 0 2vw; max-width: 1520px; margin: 0 auto;}
+    @media (max-width:1260px){ .main{flex-direction:column;gap:0;} .sidebar{max-width:99vw;} }
+    .left-main { flex: 2.1; }
+    .gallery-main { width: 100%; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 24px; }
+    .gallery-main img { width: 100%; border-radius: 7px; object-fit: cover;}
+    .product-row { display: flex;align-items:center;justify-content:space-between;padding:10px 0;}
+    .at-badges { display: flex; gap: 32px; margin-bottom: 18px; flex-wrap: wrap; }
+    .at-badge {display: flex;align-items:center;gap:7px;font-size:15px;}
+    .at-badge-icon { font-size: 24px; }
+    .elphaba-section { background: #f7f7f7; border-radius:14px; padding: 24px 28px;margin: 35px 0;}
+    .elphaba-section h2 { text-align: center; font-weight: 400;margin: 0 0 13px 0;}
+    .elphaba-section .elphaba-p { text-align:center; max-width:800px;margin: 0 auto 22px auto;font-size:17px;}
+    .sidebar { flex: 1.2; max-width: 410px; min-width: 320px; }
+    .price-sale { color: #c2272d; font-size: 19px; font-weight: bold; margin-top: 6px;}
+    .price-line { color: #757575; text-decoration: line-through; margin-left: 7px; }
+    .save-price { color: #c2272d; margin-left: 9px;}
+    .prod-stars {margin: 9px 0 12px 0; color: #2e86c1;}
+    .prod-meta { display: flex; align-items:center; gap: 20px; color: #444; flex-wrap: wrap;}
+    .prod-meta span {font-size: 15px;}
+    .order-block { background: #fafbfc; border-radius: 8px; padding: 19px 17px; margin-top: 18px;}
+    .option-row { border: 1px solid #e1e1e1; background: #fff; border-radius: 4px;padding:14px 12px;font-size:17px; margin-bottom: 8px;}
+    .option-row span{font-weight:bold;}
+    .add-basket-row { margin-top: 24px; display: flex; align-items: center;}
+    .qty { width: 54px; padding: 5px 8px; font-size: 17px; border-radius: 5px; border: 1px solid #c4c4c4; margin-right: 14px;}
+    .add-to-basket { background: #0f85d2; color: #fff; font-weight: bold; font-size: 20px; border: none; border-radius: 24px; padding: 11px 45px; cursor: pointer;}
+    .promo-block { background: #faf2f2; color: #b1282d; border: 1.5px solid #bd6f81; border-radius: 9px; padding: 14px 16px; font-size: 16px; margin:18px 0 9px 0; }
+    .social-row {margin: 18px 0 0 0;display: flex;gap: 24px;font-size: 22px;justify-content:center;}
+    .footer { background: #fff; padding: 34px 2.5vw 14px 2.5vw; margin-top: 34px; border-top: 1.6px solid #d7d7d7;}
+    .footer-menu { display: flex; gap: 85px; justify-content: flex-start; flex-wrap: wrap;}
+    .footer-list-title { font-weight: bold; margin-bottom: 11px; }
+    .footer-links { list-style: none; margin: 0; padding: 0;}
+    .footer-links li {margin-bottom:5px;}
+    .footer-tags-section { display: flex; align-items: flex-start; gap: 35px; margin-top: 22px; }
+    .footer-logos { margin-top: 15px;}
+    .trustpilot { margin-top: 10px;}
+    .trustpilot-stars {color:#43b047;font-size: 22px;}
+    .footer-social { margin-top: 12px;display:flex;gap:11px;}
+    .disclaimer { font-size: 13px; color: #222; margin-top: 28px;}
+    .copyright {margin-top:20px;color:#888;}
+    
+    /* 3D Model Viewer Styles */
+    .model-viewer-container { 
+      position: relative; 
+      width: 100%; 
+      height: 400px; 
+      border-radius: 8px; 
+      overflow: hidden; 
+      background: #f5f5f5; 
+      grid-column: 1 / -1;
+      margin-bottom: 20px;
+    }
+    model-viewer { 
+      width: 100%; 
+      height: 100%; 
+      --progress-bar-color: transparent; 
+    }
+    .viewer-controls { 
+      position: absolute; 
+      bottom: 20px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      display: flex; 
+      gap: 10px; 
+      z-index: 10; 
+      background: rgba(0, 0, 0, 0.7); 
+      padding: 10px; 
+      border-radius: 50px; 
+    }
+    .viewer-controls button { 
+      background: none; 
+      border: none; 
+      color: white; 
+      padding: 8px 12px; 
+      border-radius: 50%; 
+      cursor: pointer; 
+      font-size: 16px; 
+      transition: all 0.3s; 
+    }
+    .viewer-controls button:hover { 
+      background: rgba(255, 255, 255, 0.2); 
+      transform: scale(1.1); 
+    }
+    .progress-bar { 
+      position: absolute; 
+      bottom: 20px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      width: 80%; 
+      max-width: 400px; 
+      height: 12px; 
+      background: rgba(255, 255, 255, 0.1); 
+      border-radius: 10px; 
+      overflow: hidden; 
+      z-index: 10; 
+    }
+    .update-bar { 
+      height: 100%; 
+      width: 0%; 
+      background: linear-gradient(to right, #1a2a6c, #b21f1f); 
+      border-radius: 10px; 
+      transition: width 0.3s ease; 
+    }
+    .ar-button { 
+      position: absolute; 
+      bottom: 20px; 
+      right: 20px; 
+      background: #000; 
+      color: white; 
+      border: none; 
+      padding: 12px 20px; 
+      border-radius: 50px; 
+      cursor: pointer; 
+      font-size: 16px; 
+      font-weight: 600; 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+      z-index: 10; 
+      transition: all 0.3s; 
+    }
+    .ar-button:hover { 
+      background: #333; 
+      transform: translateY(-2px); 
+    }
+    .model-badge { 
+      position: absolute; 
+      top: 20px; 
+      left: 20px; 
+      background: #000; 
+      color: white; 
+      padding: 5px 10px; 
+      font-size: 12px; 
+      border-radius: 3px; 
+      z-index: 10; 
+    }
+    
+    @media (max-width:900px){.main{flex-direction:column;gap:28px;}.sidebar{max-width:100vw;min-width:0;}}
+    @media (max-width:650px){
+          .gallery-main { grid-template-columns: 1fr; gap: 18px;}
+          .main {padding:9px;gap:12px;}
+          .header-main, .search-row, .nav-row, .footer {padding-left: 10px; padding-right: 10px;}
+          .elphaba-section {padding:14px;}
+          .footer-menu{gap:25px;}
+          .model-viewer-container { height: 300px; }
+          .viewer-controls { bottom: 70px; }
+          .ar-button { bottom: 70px; }
+        }
+  </style>
+</head>
+<body>
+  <!-- SALE BAR -->
+  <div class="red-bar">
+    SALE ENDS IN:
+    <span class="timer">04 days 09 hours 57 minutes</span>
+  </div>
+  <!-- HEADER -->
+  <div class="header-main">
+    <div class="logo-section">
+      <div class="logo-img"><span>Furniture Village</span></div>
+      <span class="support-bar">
+        &nbsp; Call our sofa experts on <a href="tel:03456461701">0345 646 1701</a>
+      </span>
+    </div>
+    <div class="top-icons">
+      <span>Store finder</span>
+      <span>Track my order</span>
+      <span style="font-size:20px;">&#9829;</span>
+      <span style="font-size:20px;">&#128100;</span>
+      <span style="font-size:20px;">&#128717;</span>
+    </div>
+  </div>
+  <!-- SEARCH -->
+  <div class="search-row">
+    <div class="search-bar-inner">
+      <input class="searchbar" type="text" placeholder="Search for a product or brand">
+    </div>
+  </div>
+  <!-- NAVIGATION -->
+  <div class="nav-row">
+    <a href="#">Sale</a>
+    <a href="#">New</a>
+    <a href="#">Sofas & Chairs</a>
+    <a href="#">Dining</a>
+    <a href="#">Living room</a>
+    <a href="#">Beds & Bedroom</a>
+    <a href="#">Home Accessories</a>
+    <a href="#">Quick Delivery</a>
+    <a href="#">Inspire Me</a>
+    <a href="#">Clearance</a>
+  </div>
+  <!-- MAIN GRID -->
+  <div class="main">
+    <!-- Left PRODUCT IMAGES AND ELPHABA COLLECTION -->
+    <div class="left-main">
+      <div class="product-row">
+        <div class="at-badges">
+          <div class="at-badge"><span class="at-badge-icon">&#8962;</span> Exclusive to Furniture Village</div>
+          <div class="at-badge"><span class="at-badge-icon">&#9786;</span> Medium – Comfort and support</div>
+          <div class="at-badge"><span class="at-badge-icon">&#128198;</span> 20 Year Structural Guarantee</div>
+          <div class="at-badge"><span class="at-badge-icon">&#128126;</span> 3D View Available</div>
+        </div>
       </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+      
+      <div class="gallery-main">
+        <!-- 3D Model Viewer -->
+        <div class="model-viewer-container">
+          <model-viewer 
+            src="./Bsofa.glb"
+            ar 
+            ar-modes="webxr scene-viewer quick-look" 
+            camera-controls 
+            tone-mapping="./music_hall_01_1k.hdr"
+            shadow-intensity="1.19" 
+            autoplay 
+            environment-image="neutral"
+            exposure="0.72" 
+            shadow-softness="1" 
+            camera-orbit="0deg 75deg 3m" 
+            field-of-view="20.27deg"
+            alt="Elphaba Sofa 3D Model">
+            
+            <div class="progress-bar" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+            
+            <button slot="ar-button" class="ar-button">
+              View in AR
+            </button>
+          </model-viewer>
+          
+          <div class="model-badge">3D VIEW</div>
+    
+        </div>
+        
+        <!-- Gallery Images -->
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Sofa 1">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" alt="Sofa 2">
+
       </div>
-    </model-viewer>  
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-  </body>
+      
+      <div class="elphaba-section">
+        <div style="text-align:center;margin-bottom:4px;">
+          <span style="color:#3271bb;font-size:15px;font-weight:600;">More from</span>
+        </div>
+        <h2>The Elphaba Collection</h2>
+        <div class="elphaba-p">
+          Why play it safe when you make a statement? Our exclusive Elphaba range is a fabulous synthesis of stunning details, ingenious design and exceptional comfort – pocket sprung seat cushioning comes as standard and you can also add power recliners and manual headrests. Showcasing a silhouette inspired by Art Deco style, Elphaba sofas and chairs are innovative as well as striking. In each sofa and chair arm you'll find a pull-out storage compartment that makes sure all your relaxation essentials are close at hand. Available in both 100% leather and fabric, the handcrafted Elphaba range is exclusively available at Furniture Village.
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2 style="font-weight:normal;font-size:25px;margin:0;">
+        Elphaba Fabric 3 Seater Power Recliner Sofa with Storage Arms
+      </h2>
+      <div>
+        <span class="save-price">Save £446</span>
+        <span class="price-line">After Sale Price £1645</span>
+        <span class="price-line">Sale £1395</span>
+      </div>
+      <div class="price-sale">
+        Final Reduction £1199
+      </div>
+      <div class="prod-stars">★★★★☆ (8)</div>
+      <div class="prod-meta">
+        <span> <span style="font-size:18px;">🚚</span> Delivered in 5 weeks</span>
+        <span>0% Finance available</span>
+        <a href="#">Order a fabric sample</a>
+      </div>
+      <div class="order-block">
+        <div class="option-row"><span>Colour:</span> Opulence Bottle Green 51011</div>
+        <div class="option-row"><span>Recliner:</span> Power Recliner</div>
+        <div class="option-row"><input type="checkbox" id="care-kit"> <label for="care-kit">Add Care+ Protect & Care Kit from £160</label></div>
+        <div class="add-basket-row">
+          <select class="qty"><option selected>1</option><option>2</option><option>3</option></select>
+          <button class="add-to-basket">ADD TO BASKET</button>
+        </div>
+      </div>
+      <div class="promo-block">
+        Final Reduction<br>
+        Price includes an EXTRA £195 off. This offer cannot be applied retrospectively or with any other offer. Ends 31 August 2025.<br>
+        Sale ends in: <strong>04 days 09 hours 56 minutes</strong>
+      </div>
+      <div style="margin:16px 0;display:flex;gap:12px;align-items:center;">
+        <span style="font-size:24px;">♡</span><span>Add to Shortlist</span>
+        <span style="margin-left:auto;display:flex;gap:12px;">
+          <a href="#"><span style="font-size:20px;">&#xf09a;</span></a>
+          <a href="#"><span style="font-size:20px;">&#xf16d;</span></a>
+          <a href="#"><span style="font-size:20px;">&#xf232;</span></a>
+          <a href="#"><span style="font-size:20px;">&#xf1bc;</span></a>
+          <a href="#"><span style="font-size:20px;">&#xf0e0;</span></a>
+        </span>
+      </div>
+      <div style="margin-top:17px;">
+        <button style="width:100%;padding:13px 0;background:#f3f4f4;border:none;border-radius:8px;font-size:18px;font-weight:bold;cursor:pointer;">Shop the range</button>
+      </div>
+      <div style="margin-top:23px;">
+        <h3 style="font-size:19px;margin-bottom:8px;">Why you'll love it</h3>
+        <ul style="margin-top:0;">
+          <li>Everything about this sofa looks and feels fabulous.</li>
+          <li>You'll love its cool Art Deco-inspired lines, deep seats and secret storage.</li>
+          <li>With optional power recliners and perfect-positioning manual headrests.</li>
+          <li>The power model's back recline and footrest work independently for personalised comfort.</li>
+          <li>Pocket spring seat cushioning ensures that this sofa is as comfy as it is stylish.</li>
+          <li>Plus each arm conceals a generously sized pull-out storage compartment.</li>
+          <li>Metal legs.</li>
+          <li>Upholstered in a choice of luxe fabrics and sophisticated colours.</li>
+          <li>Striking stitching detail accentuates the sumptuous cushioning.</li>
+          <li>Also available in 100% leather.</li>
+          <li>Made by hand exclusively for Furniture Village.</li>
+          <li>This 3-seater sofa with storage arms is part of our Elphaba range.</li>
+        </ul>
+        <h3 style="font-size:18px;">What you need to know</h3>
+        <ul>
+          <li>Medium comfort level.</li>
+          <li>Seat suspension: sinuous springs.</li>
+          <li>Seat cushioning: pocket spring, foam and Dacron. Seat cushioning is fixed.</li>
+          <li>Back suspension: webbing.</li>
+          <li>Back cushioning: fibre. Back cushioning is fixed.</li>
+          <li>Arm cushioning: foam and Dacron.</li>
+          <li>Back and feet are removable for ease of access.</li>
+          <li>USB charging is not available on the non-power recliner version of this sofa.</li>
+          <li>Please allow time for the recliner mechanism to ease.</li>
+          <li>Minor gaps are necessary to ensure ease of motion and may be exaggerated depending on floor type.</li>
+          <li>Fixed seat and back cushions require smoothing and straightening regularly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-menu">
+      <div>
+        <div class="footer-list-title">About us</div>
+        <ul class="footer-links">
+          <li>About us</li>
+          <li>Careers</li>
+          <li>Privacy policy</li>
+          <li>Cookie policy</li>
+          <li>Tax strategy</li>
+          <li>Sustainability</li>
+          <li>Price information</li>
+          <li>Modern slavery statement</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-list-title">Inspiration</div>
+        <ul class="footer-links">
+          <li>TV ad</li>
+          <li>Brands directory</li>
+          <li>The Home of Inspiration</li>
+          <li>Shop Instagram</li>
+          <li>The 24-hour sleep guide</li>
+          <li>How to move a sofa</li>
+          <li>Order a brochure</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-list-title">Our services</div>
+        <ul class="footer-links">
+          <li>Interest free credit</li>
+          <li>Care+ Protect</li>
+          <li>Delivery</li>
+          <li>Recycling your furniture</li>
+          <li>20 year guarantee</li>
+          <li>Lowest price guaranteed</li>
+          <li>Home Design Studio</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-list-title">Help & advice</div>
+        <ul class="footer-links">
+          <li>Contact us</li>
+          <li>Customer Care</li>
+          <li>Returns and cancellations</li>
+          <li>Payment options</li>
+          <li>Buying and care guides</li>
+          <li>Glossary of terms</li>
+        </ul>
+      </div>
+      <div style="min-width:200px;">
+        <div class="footer-logos">
+          <div style="margin-bottom:10px;">
+            <img style="height:55px;border-radius:7px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Furniture_Village_logo.svg/1280px-Furniture_Village_logo.svg.png" alt="Furniture Village logo">
+          </div>
+          <div class="trustpilot">
+            <span class="trustpilot-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+            TrustScore <b>4.8</b> <a href="#">165,483 reviews</a>
+          </div>
+          <div class="footer-social">
+            <span style="font-size:23px;">&#xf09a;</span> <span style="font-size:23px;">&#xf16d;</span> <span style="font-size:23px;">&#xf232;</span> <span style="font-size:23px;">&#xf1bc;</span> <span style="font-size:23px;">&#xf0d2;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-tags-section"></div>
+    <div class="disclaimer">
+      *0% APR Representative example: Cash price £2000. Deposit £400. 20 monthly payments of £80. Total payable £2000. Minimum spend of £500. Subject to status. Written quotation upon request. Furniture Village Ltd (Company number 2307708, Slough SL1 4DX) are a credit broker, not a lender. Authorised and regulated by the Financial Conduct Authority. Credit is provided by Novuna Personal Finance, a trading style of Mitsubishi HC Capital UK PLC, authorised and regulated by the Financial Conduct Authority. Financial Services Register no. 704348. The register can be accessed through <a href="http://www.fca.org.uk" target="_blank">http://www.fca.org.uk</a>.
+    </div>
+    <div class="copyright">
+      &copy; Furniture Village UK 2025
+    </div>
+    <div style="font-size: 15px; margin-top: 15px; color: #232323; cursor:pointer;">
+      Terms & conditions
+    </div>
+  </div>
+
+  <script>
+    // 3D Model Viewer Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const modelViewer = document.querySelector('model-viewer');
+      const progressBar = document.querySelector('.update-bar');
+      
+      // Simulate loading progress
+      let progress = 0;
+      const loadingInterval = setInterval(() => {
+        progress += Math.random() * 10;
+        progressBar.style.width = `${progress}%`;
+        
+        if (progress >= 100) {
+          clearInterval(loadingInterval);
+        }
+      }, 300);
+      
+      // Listen for actual model load event
+      modelViewer.addEventListener('load', () => {
+        clearInterval(loadingInterval);
+        progressBar.style.width = '100%';
+        setTimeout(() => {
+          document.querySelector('.progress-bar').classList.add('hide');
+        }, 500);
+      });
+      
+      // View controls
+      document.getElementById('reset-view').addEventListener('click', () => {
+        modelViewer.cameraOrbit = '0deg 75deg 3m';
+        modelViewer.fieldOfView = '20.27deg';
+      });
+      
+      document.getElementById('orbit-control').addEventListener('click', () => {
+        modelViewer.cameraOrbit = '0deg 75deg 3m';
+      });
+      
+      document.getElementById('first-person').addEventListener('click', () => {
+        modelViewer.cameraOrbit = '0deg 90deg 1.5m';
+      });
+    });
+  </script>
+</body>
 </html>
